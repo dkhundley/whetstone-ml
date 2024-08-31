@@ -129,4 +129,7 @@ dmypy.json
 .pyre/
 
 # Added by @dkhundley
+.DS_Store
 .idea/
+keys/
+sensitive/
