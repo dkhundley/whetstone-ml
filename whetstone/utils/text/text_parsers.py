@@ -65,3 +65,7 @@ def count_syllables(word):
     syllable_count = max(syllable_count, 1)
 
     return syllable_count
+
+
+
+__all__ = ['count_syllables']
