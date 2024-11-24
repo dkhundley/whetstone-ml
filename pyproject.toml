@@ -1,6 +1,6 @@
 [project]
 name = "whetstone-ml"
-version = ""
+version = "0.0.1"
 description = "This package supports a variety of machine learning validation and evaluation tasks."
 authors = [{name = "David Hundley", email = "david.k.hundley@gmail.com"}]
 license = {file = "LICENSE"}
