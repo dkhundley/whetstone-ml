@@ -1,3 +1,2 @@
 from .text.text_parsers import *
-
-text_parsers = *
+from .text import text_parsers
