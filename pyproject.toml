@@ -16,8 +16,5 @@ build-backend = "setuptools.build_meta"
 Homepage = "https://github.com/dkhundley/whetstone-ml"
 Documentation = "https://github.com/dkhundley/whetstone-ml"
 
-[tool.setuptools]
-packages = ["whetstone"]
-
 [tool.setuptools.packages.find]
 include = ["whetstone*"]
