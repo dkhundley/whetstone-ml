@@ -1,1 +1,1 @@
-from .text import *
+from .text.text_parsers import *
