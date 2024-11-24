@@ -19,7 +19,7 @@ jobs:
       - name: Update version in pyproject.toml
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
-          sed -i "s/version = \".*\"/version = \"$VERSION\"/" pyproject.toml
+          sed -i "s|version = \".*\"|version = \"$VERSION\"|" pyproject.toml
           
       - name: Install build tools
         run: |
