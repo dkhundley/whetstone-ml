@@ -1,6 +1,6 @@
 from whetstone.utils.text.text_parsers import *
 
-def calculate_flesch_kincaid_reading_ease(text):
+def calculate_flesch_kincaid_reading_ease(text: str) -> float:
     '''
     Calculate the Flesch-Kincaid Reading Ease score for a given text.
 
@@ -30,7 +30,7 @@ def calculate_flesch_kincaid_reading_ease(text):
 
 
 
-def calculate_flesch_kincaid_grade_level(text):
+def calculate_flesch_kincaid_grade_level(text: str) -> float:
     '''
     Calculate the Flesch-Kincaid Grade Level score for a given text.
 
@@ -57,3 +57,27 @@ def calculate_flesch_kincaid_grade_level(text):
     flesch_kincaid_grade_level_score = round(.39 * avg_words_per_sentence + 11.8 * avg_syllables_per_word - 15.59, 2)
 
     return flesch_kincaid_grade_level_score
+
+
+
+def calculate_all_readability_metrics(text: str) -> dict:
+    '''
+    Calculate all readability metrics for a given text.
+    
+    Inputs:
+        - text (str): The input text for which to calculate all readability metrics.
+    
+    Returns:
+        - readability_metrics (dict): A dictionary containing all readability metrics for the input text.
+    '''
+    
+    # Instantiating a dictionary to store the readability metrics
+    readability_metrics = {}
+
+    # Calculating the Flesch-Kincaid Reading Ease score
+    readability_metrics['flesch_kincaid_reading_ease'] = calculate_flesch_kincaid_reading_ease(text)
+
+    # Calculating the Flesch-Kincaid Grade Level score
+    readability_metrics['flesch_kincaid_grade_level'] = calculate_flesch_kincaid_grade_level(text)
+
+    return readability_metrics
