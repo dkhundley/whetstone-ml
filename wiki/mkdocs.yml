@@ -32,8 +32,6 @@ plugins:
       lang: en
       separator: '[\s\-]+'
   - awesome-pages: {}
-  - macros:
-      include_dir: macros
 
 
 
