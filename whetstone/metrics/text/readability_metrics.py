@@ -1,83 +1,108 @@
-from whetstone.utils.text.text_parsers import *
+from typing import Union, List
+from whetstone.utils.text.text_parsers import tokenize_sentence, count_syllables
 
-def calculate_flesch_kincaid_reading_ease(text: str) -> float:
+
+
+def calculate_flesch_kincaid_reading_ease(texts: Union[str, List[str]]) -> List[float]:
     '''
-    Calculate the Flesch-Kincaid Reading Ease score for a given text.
+    Calculate the Flesch-Kincaid Reading Ease score for one or multiple texts.
 
     Inputs:
-        - text (str): The input text for which to calculate the Flesch-Kincaid Reading Ease score.
+        - texts (str or list[str]): The input text(s) for which to calculate the Reading Ease score.
 
     Returns:
-        - flesch_kincaid_reading_ease_score (float): The Flesch-Kincaid Reading Ease score for the input text.
+        - scores (list[float]): A list of Flesch-Kincaid Reading Ease scores corresponding to each input text.
     '''
-    # Tokenizing the text into sentences and words
-    sentences = tokenize_sentence(text)
-    words = text.split()
+    # If a single text string is provided, wrap it in a list
+    if isinstance(texts, str):
+        texts = [texts]
 
-    # Calculating the number of sentences, words, and syllables
-    num_sentences = len(sentences)
-    num_words = len(words)
-    num_syllables = sum(count_syllables(word) for word in words)
-    
-    # Calculating the average number of words per sentence and syllables per word
-    avg_words_per_sentence = num_words / num_sentences
-    avg_syllables_per_word = num_syllables / num_words
-    
-    # Calculating the Flesch Reading Ease score
-    flesch_kincaid_reading_ease_score = round(206.835 - 1.015 * avg_words_per_sentence - 84.6 * avg_syllables_per_word, 2)
+    results = []
+    for text in texts:
+        # Tokenizing the text into sentences and words
+        sentences = tokenize_sentence(text)
+        words = text.split()
 
-    return flesch_kincaid_reading_ease_score
+        # Calculating the number of sentences, words, and syllables
+        num_sentences = len(sentences)
+        num_words = len(words)
+        num_syllables = sum(count_syllables(word) for word in words)
+        
+        # Calculating the averages
+        avg_words_per_sentence = num_words / num_sentences if num_sentences > 0 else 0
+        avg_syllables_per_word = num_syllables / num_words if num_words > 0 else 0
+        
+        # Calculating the Flesch-Kincaid Reading Ease score
+        score = round(206.835 - 1.015 * avg_words_per_sentence - 84.6 * avg_syllables_per_word, 2)
+        results.append(score)
+
+    return results
 
 
 
-def calculate_flesch_kincaid_grade_level(text: str) -> float:
+def calculate_flesch_kincaid_grade_level(texts: Union[str, List[str]]) -> List[float]:
     '''
-    Calculate the Flesch-Kincaid Grade Level score for a given text.
+    Calculate the Flesch-Kincaid Grade Level score for one or multiple texts.
 
     Inputs:
-        - text (str): The input text for which to calculate the Flesch-Kincaid Grade Level score.
+        - texts (str or list[str]): The input text(s) for which to calculate the Grade Level score.
 
     Returns:
-        - flesch_kincaid_grade_level_score (float): The Flesch-Kincaid Grade Level for the input text.
+        - scores (list[float]): A list of Flesch-Kincaid Grade Level scores corresponding to each input text.
     '''
-    # Tokenizing the text into sentences and words
-    sentences = tokenize_sentence(text)
-    words = text.split()
+    # If a single text string is provided, wrap it in a list
+    if isinstance(texts, str):
+        texts = [texts]
 
-    # Calculating the number of sentences, words, and syllables
-    num_sentences = len(sentences)
-    num_words = len(words)
-    num_syllables = sum(count_syllables(word) for word in words)
-    
-    # Calculating the average number of words per sentence and syllables per word
-    avg_words_per_sentence = num_words / num_sentences
-    avg_syllables_per_word = num_syllables / num_words
-    
-    # Calculating the Flesch-Kincaid Grade Level score
-    flesch_kincaid_grade_level_score = round(.39 * avg_words_per_sentence + 11.8 * avg_syllables_per_word - 15.59, 2)
+    results = []
+    for text in texts:
+        # Tokenizing the text into sentences and words
+        sentences = tokenize_sentence(text)
+        words = text.split()
 
-    return flesch_kincaid_grade_level_score
+        # Calculating the number of sentences, words, and syllables
+        num_sentences = len(sentences)
+        num_words = len(words)
+        num_syllables = sum(count_syllables(word) for word in words)
+        
+        # Calculating the averages
+        avg_words_per_sentence = num_words / num_sentences if num_sentences > 0 else 0
+        avg_syllables_per_word = num_syllables / num_words if num_words > 0 else 0
+        
+        # Calculating the Flesch-Kincaid Grade Level score
+        score = round(.39 * avg_words_per_sentence + 11.8 * avg_syllables_per_word - 15.59, 2)
+        results.append(score)
+
+    return results
 
 
 
-def calculate_all_readability_metrics(text: str) -> dict:
+def calculate_all_readability_metrics(texts: Union[str, List[str]]) -> List[dict]:
     '''
-    Calculate all readability metrics for a given text.
+    Calculate all readability metrics for one or multiple texts.
     
     Inputs:
-        - text (str): The input text for which to calculate all readability metrics.
+        - texts (str or list[str]): The input text(s) for which to calculate the readability metrics.
     
     Returns:
-        - readability_metrics (dict): A dictionary containing all readability metrics for the input text.
+        - results (list[dict]): A list of dictionaries, each containing all readability metrics for the corresponding input text.
     '''
     
-    # Instantiating a dictionary to store the readability metrics
-    readability_metrics = {}
+    # Wrapping the input in a list if it is a single string
+    if isinstance(texts, str):
+        texts = [texts]
+    
+    # Calculating all the respective metrics all metrics as lists
+    fk_reading_ease_scores = calculate_flesch_kincaid_reading_ease(texts)
+    fk_grade_level_scores = calculate_flesch_kincaid_grade_level(texts)
+    
+    # Combining into a list of dictionaries
+    results = []
+    for re_score, gl_score in zip(fk_reading_ease_scores, fk_grade_level_scores):
+        readability_metrics = {
+            'flesch_kincaid_reading_ease': re_score,
+            'flesch_kincaid_grade_level': gl_score
+        }
+        results.append(readability_metrics)
 
-    # Calculating the Flesch-Kincaid Reading Ease score
-    readability_metrics['flesch_kincaid_reading_ease'] = calculate_flesch_kincaid_reading_ease(text)
-
-    # Calculating the Flesch-Kincaid Grade Level score
-    readability_metrics['flesch_kincaid_grade_level'] = calculate_flesch_kincaid_grade_level(text)
-
-    return readability_metrics
+    return results
