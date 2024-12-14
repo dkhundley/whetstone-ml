@@ -1,4 +1,5 @@
 site_name: Whetstone ML
+site_description: A Python library to support AI/ML model validation
 
 
 theme:
