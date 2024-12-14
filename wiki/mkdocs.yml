@@ -1,7 +1,6 @@
 site_name: Whetstone ML
 site_description: A Python library to support AI/ML model validation
 
-
 theme:
   name: material
   features:
@@ -26,10 +25,10 @@ theme:
 plugins:
   - search:
       lang: en
-      separator = '[\s\-]+'
+      separator: '[\s\-]+'
   - awesome-pages: {}
   - macros:
-      incude_dir: macros
+      include_dir: macros
 
 nav:
   - Home: index.md
