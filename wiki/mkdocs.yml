@@ -1,6 +1,12 @@
+## SITE METADATA
+## ----------------------------------------------------------------------------
 site_name: Whetstone ML
 site_description: A Python library to support AI/ML model validation
 
+
+
+## SITE CUSTOMIZATION
+## ----------------------------------------------------------------------------
 theme:
   name: material
   features:
@@ -30,5 +36,9 @@ plugins:
   - macros:
       include_dir: macros
 
+
+
+## SITE NAVIGATION
+## ----------------------------------------------------------------------------
 nav:
   - Home: index.md
