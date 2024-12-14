@@ -1,0 +1,30 @@
+name: Deploy Wiki Updates
+
+on:
+    push:
+        paths:
+            - 'wiki/**'
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checking out repository
+              uses: actions/checkout@v3
+
+            - name: Setting Python environment
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.11'
+
+            - name: Installing Python MkDocs dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install mkdocs mkdocs-material
+
+            - name: Deploying wiki updates to GitHub Pages
+              run: |
+                  mkdocs gh-deploy --force
