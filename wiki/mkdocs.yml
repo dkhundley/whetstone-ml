@@ -1,0 +1,34 @@
+site_name: Whetstone ML
+
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.highlight
+    - toc.integrate
+  
+  markdown_extensions:
+    - toc:
+        permalink: true
+    - footnotes
+    - def_list
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - pymdownx.superfences
+    - pymdownx.details
+    - pymdownx.emoji
+    - pymdownx.inlinehilite
+
+plugins:
+  - search:
+      lang: en
+      separator = '[\s\-]+'
+  - awesome-pages: {}
+  - macros:
+      incude_dir: macros
+
+nav:
+  - Home: index.md
