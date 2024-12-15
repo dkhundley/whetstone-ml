@@ -27,6 +27,7 @@ This score may be interpreted using the table below:
 Generally speaking, writers should aim for a score of 60 or higher, which indicates that the text is easily understood by most adults. Flesch-Kincaid Reading Ease is widely used in the field of education and is often used to evaluate the readability of textbooks and other educational materials. The Flesch-Kincaid Reading Ease metric is also used by software tools, like Microsoft Word, as a metric for readability analysis.
 
 To optimize the Flesch-Kincaid Reading Ease metric, consider applying the following strategies:
+
 - Simplify sentence structure. (e.g. Use sentence structure, avoid compound sentences)
 - Simplify vocabulary. (e.g. Avoid jargon, use common words)
 - Use an "active voice."
@@ -68,6 +69,7 @@ For context, the Flesch-Kincaid Grade Level metric is indeed correlated closely 
 | **Focus**                   | Focuses on education and school alignment. | Focuses on accessibility and readability for general audiences. |
 
 To optimize the Flesch-Kincaid Grade Level metric, consider applying the following strategies:
+
 - (See the Flesch-Kincaid Reading Ease metric as there is much overlap)
 - Use concrete and familiar examples.
 - Avoid "passive voice."
