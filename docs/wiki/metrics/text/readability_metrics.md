@@ -29,7 +29,7 @@ Generally speaking, writers should aim for a score of 60 or higher, which indica
 
 
 ## Flesch-Kincaid Grade Level
-This metric estimates the grade level required to understand a text. The formula for the Flesch-Kincaid Grade Level is:
+The Flesch-Kincaid Grade Level metric is a readability test designed to indicate the complexity of a text in terms of the U.S. grade level required to understand it. The formula for the Flesch-Kincaid Grade Level is:
 
 $$
 0.39 \times \text{average words per sentence} + 11.8 \times \text{average syllables per word} - 15.59
@@ -49,3 +49,14 @@ This score may be interpreted using the table below:
 | 14-15       | College               |
 
 The Flesch-Kincaid Grade Level is often used in the field of education to assess the readability of textbooks and other educational materials. It is also used in natural language processing to evaluate the complexity of text data.
+
+For context, the Flesch-Kincaid Grade Level metric is indeed correlated closely with the Flesch-Kincaid Reading Ease metric.
+
+| Feature                     | Flesch-Kincaid Grade Level         | Flesch-Kincaid Reading Ease           |
+|-----------------------------|------------------------------------|---------------------------------------|
+| **Purpose**                 | Indicates the U.S. grade level needed to understand a text. | Rates text readability on a 0–100 scale (higher scores are easier). |
+| **Scale**                   | Numeric scale tied to U.S. school grade levels (e.g., 8th grade). | Numeric scale: 0 (very hard) to 100 (very easy). |
+| **Interpretation**          | Outputs a grade level (e.g., 6.0 = suitable for 6th-grade students). | Outputs a score between 0 and 100 (e.g., 80 = easy to read). |
+| **Target Audience**         | Designed to match text to education levels (e.g., for educators). | Designed to evaluate overall text difficulty for general readers. |
+| **Use Cases**               | Used in education to grade reading material difficulty by age or school grade. | Used in broader contexts (e.g., legal, technical writing) to ensure text is accessible. |
+| **Focus**                   | Focuses on education and school alignment. | Focuses on accessibility and readability for general audiences. |
