@@ -8,9 +8,9 @@ The Flesch-Kincade Reading Ease metric is a readiability formula used to assess 
 
 This metric measures the readability of a text on a scale from 0 to 100, with higher scores indicating easier readability. The formula for the Flesch-Kincaid Reading Ease score is:
 
-\[
+$$
 206.835 - 1.015 \times \text{average words per sentence} - 84.6 \times \text{average syllables per word}
-\]
+$$
 
 This score may be interpreted using the table below:
 
