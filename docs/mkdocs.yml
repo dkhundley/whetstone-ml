@@ -38,6 +38,6 @@ plugins:
 
 ## SITE NAVIGATION
 ## ----------------------------------------------------------------------------
-docs_dir: docs/wiki
+docs_dir: wiki
 nav:
   - Home: index.md
