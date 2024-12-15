@@ -43,5 +43,5 @@ nav:
   - Home: index.md
   - Metrics:
       - Text:
-        - Overview: metrics/text_metrics.md
-        - Readability Metrics: metrics/readability_metrics.md
+        - Overview: metrics/text/text_metrics.md
+        - Readability Metrics: metrics/text/readability_metrics.md
