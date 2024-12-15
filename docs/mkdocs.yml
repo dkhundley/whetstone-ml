@@ -65,6 +65,7 @@ nav:
   - Metrics:
       - Text:
         - Overview: ./metrics/text/text_metrics.md
+        - Retrieval Augmented Generation (RAG) Metrics: ./metrics/text/rag_metrics.md
         - Readability Metrics: ./metrics/text/readability_metrics.md
   - API Reference:
       - Text:
