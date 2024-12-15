@@ -1,0 +1,42 @@
+## SITE METADATA
+## ----------------------------------------------------------------------------
+site_name: Whetstone ML
+site_description: A Python library to support AI/ML model validation
+site_url: https://dkhundley.github.io/whetstone-ml/
+
+
+
+## SITE CUSTOMIZATION
+## ----------------------------------------------------------------------------
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.highlight
+    - toc.integrate
+  markdown_extensions:
+    - toc:
+        permalink: true
+    - footnotes
+    - def_list
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - pymdownx.superfences
+    - pymdownx.details
+    - pymdownx.emoji
+    - pymdownx.inlinehilite
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-]+'
+  - awesome-pages: {}
+
+
+
+## SITE NAVIGATION
+## ----------------------------------------------------------------------------
+nav:
+  - Home: index.md
