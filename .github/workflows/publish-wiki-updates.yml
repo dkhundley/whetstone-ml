@@ -3,7 +3,7 @@ name: Deploy Wiki Updates
 on:
     push:
         paths:
-            - 'docs/wiki/**'
+            - 'docs/**'
         branches:
             - main
 
