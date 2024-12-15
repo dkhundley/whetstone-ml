@@ -1,5 +1,7 @@
 # Readability Metrics
-FK to come!
+Reading metrics—-or readability scores--—are a set of tools that help gauge how approachable and understandable a piece of writing is, from academic articles to everyday blog posts. By examining factors like sentence length, word complexity, and vocabulary choice, these measures boil down the “reading experience” into a single number or grade level that suggests how easily a reader can follow along. While they’re not perfect—no formula can fully capture the subtleties of style, voice, or subject matter—they offer a handy starting point for anyone looking to fine-tune their text. Over the years, educators, editors, and content creators have relied on a variety of these formulas, each with its own unique method and emphasis. The goal remains the same: to ensure that the writing connects with its audience, delivering information clearly and comfortably.
+
+
 
 ## Flesch-Kincaid Reading Ease
 The Flesch-Kincade Reading Ease metric is a readiability formula used to assess teh complexity of English texts by assigning a score that reflects how easy or difficult it is to understand.
