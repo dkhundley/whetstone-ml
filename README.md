@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/assets/images/whetstone-ml-logo.png" width="400"><br>
+  <img src="assets/images/whetstone-ml-logo.png" width="400"><br>
 </div>
 
 
