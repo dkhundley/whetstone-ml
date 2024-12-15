@@ -41,3 +41,7 @@ plugins:
 docs_dir: wiki
 nav:
   - Home: index.md
+  - Metrics:
+      - Text:
+        - Overview: metrics/text_metrics.md
+        - Readability Metrics: metrics/readability_metrics.md
