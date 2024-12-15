@@ -1,3 +1,4 @@
+import re
 from typing import Union, List
 from whetstone.utils.text.text_parsers import tokenize_sentence, count_syllables
 
@@ -77,6 +78,45 @@ def calculate_flesch_kincaid_grade_level(texts: Union[str, List[str]]) -> List[f
 
 
 
+def calculate_gunning_fog_index(text: str) -> float:
+    '''
+    Calculates the Gunning Fog Index for the given text.
+    
+    Inputs:
+        - text (str): The input text to analyze.
+    
+    Returns:
+        - gunning_fog_index (float): The Gunning Fog Index score
+    '''
+    # Tokenizing sentences (basic method using punctuation)
+    sentences = re.split(r'[.!?]+', text)
+    sentences = [sentence.strip() for sentence in sentences if sentence.strip()]
+    
+    # Tokenizing words
+    words = re.findall(r'\b\w+\b', text.lower())
+    
+    # Getting the complex words (words with 3+ syllables)
+    complex_words = [word for word in words if count_syllables(word) >= 3]
+    
+    # Getting number of sentences, words, and complex words
+    num_sentences = len(sentences)
+    num_words = len(words)
+    num_complex_words = len(complex_words)
+    
+    # Avoiding division by zero
+    if num_sentences == 0 or num_words == 0:
+        return 0.0
+    
+    # Performing the Gunning Fog Index calculation
+    avg_sentence_length = num_words / num_sentences
+    percent_complex_words = (num_complex_words / num_words) * 100
+    gunning_fog_index = 0.4 * (avg_sentence_length + percent_complex_words)
+    
+    return gunning_fog_index
+
+
+
+
 def calculate_all_readability_metrics(texts: Union[str, List[str]]) -> List[dict]:
     '''
     Calculate all readability metrics for one or multiple texts.
@@ -95,13 +135,15 @@ def calculate_all_readability_metrics(texts: Union[str, List[str]]) -> List[dict
     # Calculating all the respective metrics all metrics as lists
     fk_reading_ease_scores = calculate_flesch_kincaid_reading_ease(texts)
     fk_grade_level_scores = calculate_flesch_kincaid_grade_level(texts)
-    
+    gunning_fog_scores = [calculate_gunning_fog_index(text) for text in texts]
+
     # Combining into a list of dictionaries
     results = []
-    for re_score, gl_score in zip(fk_reading_ease_scores, fk_grade_level_scores):
+    for re_score, gl_score, gf_score in zip(fk_reading_ease_scores, fk_grade_level_scores, gunning_fog_scores):
         readability_metrics = {
             'flesch_kincaid_reading_ease': re_score,
-            'flesch_kincaid_grade_level': gl_score
+            'flesch_kincaid_grade_level': gl_score,
+            'gunning_fog_index': gf_score
         }
         results.append(readability_metrics)
 

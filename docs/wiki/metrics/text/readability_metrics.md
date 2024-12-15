@@ -26,6 +26,12 @@ This score may be interpreted using the table below:
 
 Generally speaking, writers should aim for a score of 60 or higher, which indicates that the text is easily understood by most adults. Flesch-Kincaid Reading Ease is widely used in the field of education and is often used to evaluate the readability of textbooks and other educational materials. The Flesch-Kincaid Reading Ease metric is also used by software tools, like Microsoft Word, as a metric for readability analysis.
 
+To optimize the Flesch-Kincaid Reading Ease metric, consider applying the following strategies:
+- Simplify sentence structure. (e.g. Use sentence structure, avoid compound sentences)
+- Simplify vocabulary. (e.g. Avoid jargon, use common words)
+- Use an "active voice."
+- Improve sentence and paragraph flow. (e.g. Group related ideas)
+- Use lists and formatting.
 
 
 ## Flesch-Kincaid Grade Level
@@ -60,3 +66,34 @@ For context, the Flesch-Kincaid Grade Level metric is indeed correlated closely 
 | **Target Audience**         | Designed to match text to education levels (e.g., for educators). | Designed to evaluate overall text difficulty for general readers. |
 | **Use Cases**               | Used in education to grade reading material difficulty by age or school grade. | Used in broader contexts (e.g., legal, technical writing) to ensure text is accessible. |
 | **Focus**                   | Focuses on education and school alignment. | Focuses on accessibility and readability for general audiences. |
+
+To optimize the Flesch-Kincaid Grade Level metric, consider applying the following strategies:
+- (See the Flesch-Kincaid Reading Ease metric as there is much overlap)
+- Use concrete and familiar examples.
+- Avoid "passive voice."
+
+
+
+## Gunning Fog Index
+The Gunning Fog Index is a readability metric used to estimate the complexity of English-language text and the level of education required to understand it on a first reading. It was developed by Robert Gunning in 1952 and is widely applied in journalism, business communication, and education to assess whether written material is appropriate for its intended audience.
+
+The formula for the Gunning Fog Index is:
+
+$$
+0.4 \times (\text{average words per sentence} + 100 \times \text{percentage of complex words})
+$$
+
+The following table provides an interpretation of the Gunning Fog Index:
+
+| Fog Index Score | Description                              | Target Audience                     |
+|------------------|------------------------------------------|--------------------------------------|
+| **7-8**         | Easy to read                             | Suitable for middle school students |
+| **9-12**        | Moderately difficult                     | Suitable for high school students   |
+| **13-16**       | Difficult                                | Requires college-level reading      |
+| **17+**         | Very complex                             | Suitable for post-graduate level    |
+
+To optimize the Gunning Fog index, consider applying the following strategies:
+
+- Use shorter sentences.
+- Avoid complex words where simpler alternatives exist.
+- Focus on clarity and brevity.
