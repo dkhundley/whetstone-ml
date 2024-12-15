@@ -33,7 +33,6 @@ Generally speaking, writers should aim for a score of 60 or higher, which indica
 
 
 ## Flesch-Kincaid Grade Level
-Test
 This metric estimates the grade level required to understand a text. The formula for the Flesch-Kincaid Grade Level is:
 
 $$

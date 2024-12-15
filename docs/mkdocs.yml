@@ -43,7 +43,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.emoji
   - pymdownx.inlinehilite
-  - table
+  - tables
 
 
 extra_javascript:
