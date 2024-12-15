@@ -1,5 +1,5 @@
 # Readability Metrics
-Reading metrics—-or readability scores--—are a set of tools that help gauge how approachable and understandable a piece of writing is, from academic articles to everyday blog posts. By examining factors like sentence length, word complexity, and vocabulary choice, these measures boil down the “reading experience” into a single number or grade level that suggests how easily a reader can follow along. While they’re not perfect—no formula can fully capture the subtleties of style, voice, or subject matter—they offer a handy starting point for anyone looking to fine-tune their text. Over the years, educators, editors, and content creators have relied on a variety of these formulas, each with its own unique method and emphasis. The goal remains the same: to ensure that the writing connects with its audience, delivering information clearly and comfortably.
+Reading metrics-or readability scores-are a set of tools that help gauge how approachable and understandable a piece of writing is, from academic articles to everyday blog posts. By examining factors like sentence length, word complexity, and vocabulary choice, these measures boil down the “reading experience” into a single number or grade level that suggests how easily a reader can follow along. While they’re not perfect—no formula can fully capture the subtleties of style, voice, or subject matter—they offer a handy starting point for anyone looking to fine-tune their text. Over the years, educators, editors, and content creators have relied on a variety of these formulas, each with its own unique method and emphasis. The goal remains the same: to ensure that the writing connects with its audience, delivering information clearly and comfortably.
 
 
 
@@ -8,7 +8,9 @@ The Flesch-Kincade Reading Ease metric is a readiability formula used to assess 
 
 This metric measures the readability of a text on a scale from 0 to 100, with higher scores indicating easier readability. The formula for the Flesch-Kincaid Reading Ease score is:
 
-$$206.835 - 1.015 \times \text{average words per sentence} - 84.6 \times \text{average syllables per word}$$
+$$
+206.835 - 1.015 \times \text{average words per sentence} - 84.6 \times \text{average syllables per word}
+$$
 
 This score may be interpreted using the table below:
 
