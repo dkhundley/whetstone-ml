@@ -72,56 +72,21 @@ def count_syllables(word):
 
 def tokenize_sentence(text):
     '''
-    Tokenizes a text into sentences using a simple regex pattern
-    
+    Tokenizes a text into sentences using a simple algorithm
+
     Inputs:
         - text (str): The text to tokenize into sentences
-        
+
     Returns:
-        - sentences (list): A list of sentences in the text
+        - sentences (list[str]): A list of sentences in the text
     '''
-    # Creating a regex pattern to handle common abbreviations
-    ABBR = r'(?:[A-Z][a-z]{1,}\.)'  # e.g., Mr., Dr., Prof.
     
-    # Creating a regex pattern to handle common multi-period abbreviations
-    MULTI_ABBR = r'(?:[A-Z][\.][A-Z][\.])+'  # e.g., U.S., U.K.
-    
-    # Creating a regex pattern to handle numbers with decimals
-    NUM = r'(?:\d+\.\d+)'  # e.g., 3.14
-    
-    # Main pattern for sentence boundaries
-    pattern = rf"""
-        # Group for sentence ending
-        (
-            # Actual ending: .!? followed by optional quotes/brackets
-            [.!?][\"\'\)\]]* 
-            
-            # Must be followed by space or end of string
-            (?=\s|\Z)
-            
-            # Negative lookbehind for abbreviations
-            (?<!{ABBR})
-            (?<!{MULTI_ABBR})
-            (?<!{NUM})
-        )
-    """
-    
-    # Splitting the text using the pattern
-    sentences = regex.split(pattern, text, flags=re.VERBOSE)
-    
-    # Cleaning and combining split sentences
-    result = []
-    current = ''
-    for s in sentences:
-        if s.strip():
-            if regex.match(r'[.!?][\"\'\)\]]*$', s):  # If it's a punctuation part
-                current += s
-                result.append(current.strip())
-                current = ''
-            else:
-                current += s
-    
-    if current:  # Add any remaining text
-        result.append(current.strip())
-    
-    return [s for s in result if s.strip()]
+    # Cleaning the text
+    text = text.strip()
+
+    # Splitting the text into sentences
+    sentences = regex.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', text)
+
+    return sentences
+
+__all__ = ['tokenize_sentence', 'count_syllables']
