@@ -14,7 +14,7 @@ $$
 
 This score may be interpreted using the table below:
 
-<div style="text-align:center">
+<table align="center">
 
 | Score  | Reading Level       | Description           |
 |--------|---------------------|-----------------------|
@@ -26,7 +26,7 @@ This score may be interpreted using the table below:
 | 30-49  | College             | Difficult             |
 | 0-29   | College graduate    | Very difficult        |
 
-</div>
+</table>
 
 Generally speaking, writers should aim for a score of 60 or higher, which indicates that the text is easily understood by most adults. Flesch-Kincaid Reading Ease is widely used in the field of education and is often used to evaluate the readability of textbooks and other educational materials. The Flesch-Kincaid Reading Ease metric is also used by software tools, like Microsoft Word, as a metric for readability analysis.
 
@@ -41,7 +41,7 @@ $$
 
 This score may be interpreted using the table below:
 
-<div style="text-align: center;">
+<table align="center">
 
 | Grade Level | Description           |
 |-------------|-----------------------|
@@ -54,6 +54,6 @@ This score may be interpreted using the table below:
 | 12-13       | 12th grade            |
 | 14-15       | College               |
 
-</div>
+</table>
 
 The Flesch-Kincaid Grade Level is often used in the field of education to assess the readability of textbooks and other educational materials. It is also used in natural language processing to evaluate the complexity of text data.
