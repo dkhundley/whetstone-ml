@@ -128,3 +128,32 @@ To optimize the Coleman-Liau Index metric, consider applying the following strat
 - Focus on conciseness. (e.g., Eliminate unnecessary modifiers or redundant phrases.)
 - Use clear, direct writing. (e.g., Aim for straightforward phrasing without overly elaborate descriptions.)
 - Target grade-level readability. (e.g., Adjust content based on the desired audience grade level to balance simplicity and effectiveness.)
+
+
+
+## Automated Readability Index (ARI)
+The Automated Readability Index (ARI) is a readability test designed to assess the complexity of a text and estimate the grade level required to understand it. The index is calculated based on two primary text features: the average number of characters per word and the average number of words per sentence. ARI is widely used in education, publishing, and content evaluation to ensure materials are appropriate for their target audience.
+
+It provides a numerical score that corresponds to U.S. school grade levels. For example, an ARI score of 8 indicates the text is suitable for an 8th-grade reader. This makes it a useful tool for evaluating the readability of documents, books, and online content.
+
+The formula for the ARI is:
+
+$$
+4.71 \times \text{average characters per word} + 0.5 \times \text{average words per sentence} - 21.43
+$$
+
+| **ARI Score** | **Grade Level**                             | **Interpretation**                                         |
+|---------------|--------------------------------------------|-----------------------------------------------------------|
+| < 1           | Early elementary or beginner               | Very simple text, suitable for young children or beginners |
+| 1–12          | Corresponds to U.S. school grade levels    | Each score aligns with the respective school grade level   |
+| 5             | 5th grade                                  | Suitable for a 5th-grade student                          |
+| 10            | 10th grade                                 | Suitable for a 10th-grade student                         |
+| > 12          | Postsecondary (college level or higher)    | Requires higher education to understand                   |
+
+To optimize the Automated Readability Index (ARI) metric, consider applying the following strategies:
+
+- Reduce sentence length: Break down long, complex sentences into shorter, simpler ones.
+- Minimize word complexity: Use shorter words with fewer characters and avoid technical or uncommon terms.
+- Focus on conciseness: Eliminate unnecessary modifiers or redundant phrases.
+- Use clear, direct writing: Aim for straightforward phrasing without overly elaborate descriptions.
+- Target grade-level readability: Adjust content based on the desired audience grade level to balance simplicity and effectiveness.
