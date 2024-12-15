@@ -99,3 +99,32 @@ To optimize the Gunning Fog index, consider applying the following strategies:
 - Use shorter sentences.
 - Avoid complex words where simpler alternatives exist.
 - Focus on clarity and brevity.
+
+
+
+## Coleman-Liau Index
+The Coleman-Liau Index is a readability metric used to estimate the grade level required for someone to understand a text. It assesses the complexity of a text based on its characters, words, and sentences, rather than using syllables like some other readability formulas (e.g., the Flesch-Kincaid formula).
+
+The formula for the Coleman-Liau Index is:
+
+$$
+0.0588 \times \text{average letters per 100 words} - 0.296 \times \text{average sentences per 100 words} - 
+$$
+
+Here’s a breakdown of what the ranges generally indicate:
+
+| **CLI Range**   | **Reading Level**                                | **Audience**                          |
+|------------------|-------------------------------------------------|---------------------------------------|
+| 1.0 – 5.0       | Very easy to read                               | Young children or early elementary   |
+| 6.0 – 8.0       | Fairly easy to read                             | Upper elementary or middle school    |
+| 9.0 – 12.0      | Standard readability (average complexity)       | High school students                 |
+| 13.0 – 16.0     | More complex (college level)                    | College students                     |
+| 17.0+           | Very complex (graduate level or professional)   | Advanced academic or professional    |
+
+To optimize the Coleman-Liau Index metric, consider applying the following strategies:
+
+- Reduce sentence length. (e.g., Break down long, complex sentences into shorter, simpler ones.)
+- Minimize word complexity. (e.g., Use shorter words with fewer characters and avoid technical or uncommon terms.)
+- Focus on conciseness. (e.g., Eliminate unnecessary modifiers or redundant phrases.)
+- Use clear, direct writing. (e.g., Aim for straightforward phrasing without overly elaborate descriptions.)
+- Target grade-level readability. (e.g., Adjust content based on the desired audience grade level to balance simplicity and effectiveness.)
