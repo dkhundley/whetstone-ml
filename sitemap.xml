@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://dkhundley.github.io/whetstone-ml/</loc>
+         <lastmod>2024-12-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dkhundley.github.io/whetstone-ml/api/metrics/text/readability_metrics/</loc>
+         <lastmod>2024-12-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dkhundley.github.io/whetstone-ml/metrics/text/rag_metrics/</loc>
+         <lastmod>2024-12-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dkhundley.github.io/whetstone-ml/metrics/text/readability_metrics/</loc>
+         <lastmod>2024-12-15</lastmod>
+    </url>
+    <url>
+         <loc>https://dkhundley.github.io/whetstone-ml/metrics/text/text_metrics/</loc>
+         <lastmod>2024-12-15</lastmod>
+    </url>
+</urlset>
