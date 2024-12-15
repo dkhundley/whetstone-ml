@@ -39,4 +39,4 @@ plugins:
 ## SITE NAVIGATION
 ## ----------------------------------------------------------------------------
 nav:
-  - Home: docs/index.md
+  - Home: wiki/index.md
