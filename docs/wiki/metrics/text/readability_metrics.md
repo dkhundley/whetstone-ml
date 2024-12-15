@@ -4,7 +4,7 @@ Reading metrics-or readability scores-are a set of tools that help gauge how app
 
 
 ## Flesch-Kincaid Reading Ease
-The Flesch-Kincade Reading Ease metric is a readiability formula used to assess teh complexity of English texts by assigning a score that reflects how easy or difficult it is to understand.
+The Flesch-Kincaid Reading Ease metric is a readiability formula used to assess teh complexity of English texts by assigning a score that reflects how easy or difficult it is to understand.
 
 This metric measures the readability of a text on a scale from 0 to 100, with higher scores indicating easier readability. The formula for the Flesch-Kincaid Reading Ease score is:
 
@@ -14,7 +14,7 @@ $$
 
 This score may be interpreted using the table below:
 
-<div style="text-align: center;">
+<div style="text-align:center">
 
 | Score  | Reading Level       | Description           |
 |--------|---------------------|-----------------------|
@@ -33,3 +33,27 @@ Generally speaking, writers should aim for a score of 60 or higher, which indica
 
 
 ## Flesch-Kincaid Grade Level
+This metric estimates the grade level required to understand a text. The formula for the Flesch-Kincaid Grade Level is:
+
+$$
+0.39 \times \text{average words per sentence} + 11.8 \times \text{average syllables per word} - 15.59
+$$
+
+This score may be interpreted using the table below:
+
+<div style="text-align: center;">
+
+| Grade Level | Description           |
+|-------------|-----------------------|
+| 0-1         | Kindergarten          |
+| 2-3         | 1st-3rd grade         |
+| 4-5         | 4th-5th grade         |
+| 6-7         | 6th-7th grade         |
+| 8-9         | 8th-9th grade         |
+| 10-11       | 10th-11th grade       |
+| 12-13       | 12th grade            |
+| 14-15       | College               |
+
+</div>
+
+The Flesch-Kincaid Grade Level is often used in the field of education to assess the readability of textbooks and other educational materials. It is also used in natural language processing to evaluate the complexity of text data.
