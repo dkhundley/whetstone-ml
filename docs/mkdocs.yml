@@ -66,3 +66,6 @@ nav:
       - Text:
         - Overview: ./metrics/text/text_metrics.md
         - Readability Metrics: ./metrics/text/readability_metrics.md
+  - API Reference:
+      - Text:
+        - Readabilty Metrics: ./api/metrics/text/readability_metrics.md

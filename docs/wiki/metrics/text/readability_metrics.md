@@ -1,6 +1,8 @@
 # Readability Metrics
 Reading metrics—or readability scores—are a set of tools that help gauge how approachable and understandable a piece of writing is, from academic articles to everyday blog posts. By examining factors like sentence length, word complexity, and vocabulary choice, these measures boil down the “reading experience” into a single number or grade level that suggests how easily a reader can follow along. While they’re not perfect—no formula can fully capture the subtleties of style, voice, or subject matter—they offer a handy starting point for anyone looking to fine-tune their text. Over the years, educators, editors, and content creators have relied on a variety of these formulas, each with its own unique method and emphasis. The goal remains the same: to ensure that the writing connects with its audience, delivering information clearly and comfortably.
 
+To see how to calculate each of these readabilty metrics with Whetstone ML, please see the API Reference guide: [Readability Metrics API Reference](../../api/metrics/text/readability_metrics.md)
+
 
 
 ## Flesch-Kincaid Reading Ease
